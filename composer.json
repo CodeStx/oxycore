@@ -1,0 +1,37 @@
+{
+    "name": "oxylion/oxycore",
+    "description": "OxyCore main library of Oxylion Framework PHP",
+    "keywords": ["oxylion", "framework","oxycore","component"],
+    "homepage": "https://github.com/CodeStx/oxycore.git",
+    "type": "library",
+    "license": "MIT",
+    "authors": 
+    [
+        {
+            "name": "Duwles",
+            "email": "duwless@outlook.com",
+            "homepage": "https://github.com/Duwles",
+            "role": "backend dev"
+        }
+    ],
+
+    "require": {
+        "php": ">=7.4",
+        "ext-ctype": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oxycore\\Framework\\": "src/oxycore/framework/"
+        }
+    },
+    "require-dev": {
+        "composer/composer": "^1.0@dev",
+        "symfony/yaml": "^2.3 || ^3.0 || ^4.0 || ^5.0"
+    },
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.7.x-dev"
+        }
+    }
+}
