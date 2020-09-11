@@ -1,5 +1,5 @@
 <?php
-namespace Oxycore\Framework\Boost;
+namespace Oxycore\Framework;
 
 if (!function_exists('includeIfExist')) {
     function includeIfExist(string $filePath) : bool
@@ -16,13 +16,38 @@ if (!function_exists("load_basic_bootstrap")){
         @define('DS', DIRECTORY_SEPARATOR);
         @define('PS', PATH_SEPARATOR);
 
-        @define('ROOTLINK', dirname(dirname(__FILE__)));
-        @define('ROOT_PATH', dirname(dirname(__FILE__)));
-        @define('APP_PATH', ROOTLINK);
+        @define('ROOTLINK', dirname(getcwd()));
+        @define('ROOT_PATH', dirname(getcwd()));
+        @define('APP_PATH', ROOTLINK.DS."app");
         @define('BOOST_PATH', ROOTLINK . DS . "bootstrap");
-        @define('OXYCORE_PATH', ROOTLINK . DS . "phpnitrox");
+        @define('OXYCORE_PATH', ROOTLINK . DS . "src/oxycore/");
         @define('PUBLIC_PATH', ROOTLINK . DS . "public");
         @define('SRC_PATH', ROOTLINK . DS . "src");
         @define('VENDOR_PATH', ROOTLINK . DS . "vendor");
+    }
+}
+
+if (!function_exists("prt")) {
+    function prt($array)
+    {
+        echo "<pre>";
+        print_r($array);
+        echo "</pre>";
+    }
+}
+
+if (!function_exists("backtrace")) {
+    function backtrace()
+    {
+        echo "<pre>";
+        debug_print_backtrace();
+        echo "</pre>";
+    }
+}
+
+if (!function_exists("basePath")) {
+    function basePath(): string
+    {
+        return getcwd();
     }
 }

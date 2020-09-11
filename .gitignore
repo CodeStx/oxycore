@@ -2,9 +2,12 @@
 *.lock
 *.log
 *.key
+*.s3gp
 
 .env
 .htaccess
+.phpunit.result.cache
+phpunit.xml
 
 composer.phar
 
