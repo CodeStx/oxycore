@@ -1,5 +1,5 @@
 <?php
-namespace Oxycore\Framework\Boost;
+namespace Oxycore\Framework\Core;
 
 abstract class BootstrapAbstract
 {

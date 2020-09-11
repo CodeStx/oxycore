@@ -9,7 +9,7 @@ class Config
 
     public function __construct()
     {
-        $this->_config = include APP_PATH . "/config/config.php";
+        $this->_config = include APP_PATH . "/config/configs.php";
     }
 
     public function __get($key)
