@@ -1,15 +1,20 @@
 <?php
 namespace Oxycore\Framework\Kernel;
 
-class KernelHttp implements KernelInterface
-{
-    public function handle($router)
-    {
-        
-    }
+use Oxycore\Framework\Http\Request;
+use Oxycore\Framework\Http\Response;
+use Oxycore\Framework\Routing\Router;
+use Twig\Template;
 
-    public function terminate($request, $response)
-    {
-        
-    }
+abstract class KernelHttp implements KernelInterface
+{
+    protected bool $boot = false;
+
+    protected array $container;
+
+    protected string $envirnoment;
+    protected bool $debug;
+
+
+    abstract public function handle(Request $request);
 }

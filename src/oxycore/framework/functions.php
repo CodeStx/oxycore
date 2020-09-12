@@ -20,7 +20,6 @@ if (!function_exists("load_basic_bootstrap")){
         @define('ROOT_PATH', dirname(getcwd()));
         @define('APP_PATH', ROOTLINK.DS."app");
         @define('BOOST_PATH', ROOTLINK . DS . "bootstrap");
-        @define('OXYCORE_PATH', ROOTLINK . DS . "src/oxycore/");
         @define('PUBLIC_PATH', ROOTLINK . DS . "public");
         @define('SRC_PATH', ROOTLINK . DS . "src");
         @define('VENDOR_PATH', ROOTLINK . DS . "vendor");
@@ -30,9 +29,9 @@ if (!function_exists("load_basic_bootstrap")){
 if (!function_exists("prt")) {
     function prt($array)
     {
-        echo "<pre>";
+        print "<pre>";
         print_r($array);
-        echo "</pre>";
+        print "</pre>";
     }
 }
 
